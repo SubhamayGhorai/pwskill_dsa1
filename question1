@@ -1,0 +1,18 @@
+def firstUniqChar(s):
+    char_freq = {}
+    for char in s:
+        if char in char_freq:
+            char_freq[char] += 1
+        else:
+            char_freq[char] = 1
+    
+    for i, char in enumerate(s):
+        if char_freq[char] == 1:
+            return i
+    
+    return -1
+s = input()
+result = firstUniqChar(s)
+
+print("Output:", result)
+
